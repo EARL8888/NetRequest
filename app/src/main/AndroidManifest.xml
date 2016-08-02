@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.netrequest"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="com.example.netrequest.http.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".http.HttpUrlConnAty"/>
+        <activity android:name=".http.HttpClientAty"/>
+        <activity android:name=".http.VolleyAty"/>
+        <activity android:name=".http.AsyncAty"/>
+        <activity android:name=".http.XUtilAty"/>
+        <activity android:name=".http.ImageLoader"/>
+        <activity android:name=".http.OkHttp"/>
+        <activity android:name=".http.HYOkHttp"/>
+    </application>
+
+</manifest>
